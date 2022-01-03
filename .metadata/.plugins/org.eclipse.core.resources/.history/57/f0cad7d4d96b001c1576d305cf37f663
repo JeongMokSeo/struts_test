@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="alzio004">
+        <wb-resource deploy-path="/" source-path="/WebContent"/>
+        <property name="context-root" value="alzio004"/>
+        <property name="java-output-path" value="/alzio004/build/classes"/>
+    </wb-module>
+</project-modules>
