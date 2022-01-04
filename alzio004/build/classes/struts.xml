@@ -9,7 +9,7 @@
 			<result name="input" type="dispatcher"> write.jsp</result>
 		</action>
 		
-		<action name="loginCheck2" class="user.LoginCheck">
+		<action name="loginCheck2" class="user.LoginCheck2">
 			<result name="success"> welcome.jsp</result>
 			<result name="input" type="redirect"> write.jsp</result>
 		</action>

@@ -44,3 +44,11 @@
 0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:48:59 +0900] "GET /alzio005/login.jsp HTTP/1.1" 200 1241
 0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:49:07 +0900] "POST /alzio005/loginAction.action HTTP/1.1" 404 837
 0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:49:57 +0900] "POST /alzio005/loginAction.action HTTP/1.1" 404 837
+127.0.0.1 - - [03/Jan/2022:23:50:11 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:50:12 +0900] "GET /alzio005/login.jsp HTTP/1.1" 200 1241
+0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:50:12 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:50:24 +0900] "POST /alzio005/loginAction.action HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:50:24 +0900] "GET /alzio005/succAction.action HTTP/1.1" 200 306
+0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:51:52 +0900] "GET /alzio005/succAction.action HTTP/1.1" 200 306
+0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:51:54 +0900] "GET /alzio005/succAction.action HTTP/1.1" 200 306
+0:0:0:0:0:0:0:1 - - [03/Jan/2022:23:51:55 +0900] "GET /alzio005/succAction.action HTTP/1.1" 200 306

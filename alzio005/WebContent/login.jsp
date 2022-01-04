@@ -26,7 +26,10 @@
 						<td><input type="password" name="pwd" size="11" maxlength="10"></td>
 					</tr>
 					<tr>
-						<td colspan="2" align="center"><input type="submit" value="로그인"></td>
+						<td colspan="2" align="center">
+							<input type="submit" value="로그인">
+							&nbsp;&nbsp;&nbsp;<a href="join.action">회원가입</a>
+						</td>
 					</tr>
 					<tr>
 						<td colspan="2" >

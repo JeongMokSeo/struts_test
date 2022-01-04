@@ -112,5 +112,28 @@ public class DAO {
 		return aList;
 	}
 	
+	public void insert(ValueObject vo) {
+		this.vo = vo;
+		makeConnection();
+		String sql = "insert into member (seq, name, id, pwd, tel1, tel2, tel3) ";
+		sql += " values (mem_seq.nextval, ?,?,?,?,?,?)";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getId());
+			pstmt.setString(3, vo.getPwd());
+			pstmt.setString(4, vo.getTel1());
+			pstmt.setString(5, vo.getTel2());
+			pstmt.setString(6, vo.getTel3());
+			pstmt.execute();
+
+		} catch (SQLException se) {
+			vo = null;
+			se.printStackTrace();
+		}
+		
+		close();
+	}
 	
 }
