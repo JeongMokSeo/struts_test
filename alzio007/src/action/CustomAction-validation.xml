@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<!-- <!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd" > -->
+
+<validators>
+	<field name="name">
+		<field-validator type="stringlength">
+			<param name="minLength">2</param>
+			<param name="maxLength">5</param>
+			<param name="trim">true</param>
+			<message>
+				<![CDATA[ 이름은 2자이상 5자 이햐여야 합니다.]]>
+			</message>
+		</field-validator>
+	</field>
+
+	<field name="pwd">
+		<field-validator type="required">
+			<message>
+				<![CDATA[ 반드시 입력해야 합니다. ]]>
+			</message>
+		</field-validator>
+	</field>
+
+	<field name="pwdchk">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				(pwdchk == pwd )
+			</param>
+			<message>
+				<![CDATA[ 비밀번호가 다릅니다. ]]>
+			</message>
+		</field-validator>
+	</field>
+	
+	<field name="hpage">
+		<field-validator type="url">
+			<message>
+				<![CDATA[ URL형식이어야 합니다. ]]>
+			</message>
+		</field-validator>
+	</field>
+	
+	<field name="pic">
+		<field-validator type="regex">
+			<param name="expression">.*\.jpeg</param>
+			<message>
+				<![CDATA[ 파일확장자가 jpeg형식이어야 합니다. ]]>
+			</message>
+		</field-validator>
+	</field>
+	
+	<field name="int">
+		<field-validator type="int">
+			<param name="fieldName">UserAge</param>
+			<param name="min">10</param>
+			<param name="max">100</param>
+			<message>
+				<![CDATA[ ${min}-${max} 까지 입력이 가능합니다. ]]>
+			</message>			
+		</field-validator>
+	
+	</field>
+</validators>

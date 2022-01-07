@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 public class DAO {
@@ -75,6 +76,37 @@ public class DAO {
 		}
 		
 		return res;
+		
+	}
+	
+	public ArrayList<DataObject> select() {
+		
+		ArrayList<DataObject> aList = new ArrayList<DataObject>();
+		DataObject vo = null;
+		
+		String sql = "select * from market";
+		
+		try {
+			makeConnection();
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				vo = new DataObject();
+				vo.setPno(rs.getString("pno"));
+				vo.setPname(rs.getString("pname"));
+				vo.setPprice(rs.getString("pprice"));
+				vo.setPcnt(rs.getString("pcnt"));
+				aList.add(vo);
+			}
+			
+			close();
+
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return aList;
 		
 	}
 	

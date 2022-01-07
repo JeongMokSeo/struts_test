@@ -5,8 +5,12 @@
 <struts>
 	<package name="myPackage" extends="struts-default">
 		<action name="insertAction" class="mystruts.InsertAction">
-			<result name="success" type="dispatcher">success.jsp</result>
+			<result name="success" type="chain">succAction</result>
 			<result name="input" >input.jsp</result>
+		</action>
+		
+		<action name="succAction" class="mystruts.SuccAction">
+			<result>success.jsp</result>
 		</action>
 	</package>
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="requiredValidator">
+		<field-validator type="required">
+			<message>			
+				<![CDATA[ 반드시 입력하세요]]>
+			</message>
+		</field-validator>
+	</field>
+	
+	<field name="customValidator">
+		<field-validator type="jumincode">
+			<message>			
+				<![CDATA[ 주민번호는 6자리 숫자 - 7자리 숫자로 입력 되어야 합니다. ]]>
+			</message>
+		</field-validator>
+	</field>
+	
+	
+
+</validators>

@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.DADD"/>
 <fullyQualifiedTypeName name="member.SuccAction"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="data.ValueObject"/>
 <fullyQualifiedTypeName name="user.LoginData"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.Preparable"/>
@@ -16,7 +15,8 @@
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="oracle.jdbc.driver.OracleDriver"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="data.DataObject"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="data.DataObject"/>
 <fullyQualifiedTypeName name="data.DAO"/>
 </qualifiedTypeNameHistroy>
