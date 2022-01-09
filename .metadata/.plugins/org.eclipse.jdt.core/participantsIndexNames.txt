@@ -3,6 +3,8 @@ D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1578261627
 \alzio008\src
 D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4034579946.index
 \alzio009\src
+D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2401976316.index
+\web\src
 D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1347932466.index
 \alzio004\src
 D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3472412892.index
@@ -15,9 +17,13 @@ D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3505929025
 \alzio007\src
 D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2218262060.index
 \alzio003\src
+D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\983147692.index
+\web\src
 D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3161214893.index
 \alzio006\src
-D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3211424978.index
-\alzio002\src
+D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2395419592.index
+\alzio010\src
 D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3371476514.index
 \alzio001\src
+D:\test\struts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3211424978.index
+\alzio002\src

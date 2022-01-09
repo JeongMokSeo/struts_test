@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">	
+<struts>
+	<constant name="struts.multipart.maxSize" value="10485760" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	
+	<package name="web" extends="struts-default">
+		<action name="main" class="MainAction">	
+			<result name="success" >/jsp/main.jsp</result>
+		</action>
+		<action name="loginForm" class="user.action.UserLoginAction" method="form">	
+			<result name="success" >/jsp/user/login.jsp</result>
+		</action>
+		<action name="login" class="user.action.UserLoginAction" >	
+			<result type="chain">
+				<param name="actionName">main</param>
+			</result>
+		</action>
+		<action name="logout" class="user.action.UserLoginAction" method="logout">
+			<result type="chain">
+				<param name="actionName">loginForm</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>

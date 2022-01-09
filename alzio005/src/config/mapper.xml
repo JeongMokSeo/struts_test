@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="list">
+	<select id="selectMember" resultType="vo" parameterType="String">
+		select id,pwd from member where id = #{id}
+	</select>
+	
+	<select id="selectMemberArray" resultType="vo" >
+		select * from member
+	</select>
+	
+	<insert id="insertMember" parameterType="vo">
+		insert into member (seq, name, id, pwd, tel1, tel2, tel3)
+		values (mem_seq.nextval, #{name},#{id}, #{pwd}, #{tel1}, #{tel2}, #{tel3})
+	</insert>
+	
+</mapper>
