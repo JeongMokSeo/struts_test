@@ -7,18 +7,18 @@
 	<constant name="struts.i18n.encoding" value="UTF-8" />
 	
 	<package name="web" extends="struts-default">
-		<action name="main" class="MainAction">	
+		<action name="main" class="mainAction">	
 			<result name="success" >/jsp/main.jsp</result>
 		</action>
-		<action name="loginForm" class="user.action.UserLoginAction" method="form">	
+		<action name="loginForm" class="user.action.userLoginAction" method="form">	
 			<result name="success" >/jsp/user/login.jsp</result>
 		</action>
-		<action name="login" class="user.action.UserLoginAction" >	
+		<action name="login" class="user.action.userLoginAction" >	
 			<result type="chain">
 				<param name="actionName">main</param>
 			</result>
 		</action>
-		<action name="logout" class="user.action.UserLoginAction" method="logout">
+		<action name="logout" class="user.action.userLoginAction" method="logout">
 			<result type="chain">
 				<param name="actionName">loginForm</param>
 			</result>

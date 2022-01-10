@@ -1,9 +1,0 @@
-package join;
-
-import javax.swing.plaf.basic.BasicSliderUI.ActionScroller;
-
-import com.opensymphony.xwork2.ActionSupport;
-
-public class Join extends ActionSupport{
-
-}

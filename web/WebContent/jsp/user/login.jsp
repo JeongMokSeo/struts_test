@@ -15,7 +15,7 @@ body  { background-color: #ffffff;}
 <form action="login.action" method="post">
 	<table style="font-family: 맑은 고딕; height:50;" align="center" border="0" bgcolor="#ffffff">
 		<tr class="title">
-			<td align="left"><img src="/web/image/logo.bmp"></td>
+			<td align="left"><img src="/web/image/logo.jpg"></td>
 			<td align="center" width="500">
 				<font size="10">Web</font>
 			</td>
