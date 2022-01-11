@@ -37,6 +37,7 @@ body  { background-color: #ffffff;}
 		<tr height="10">
 			<td align="center" colspan="2">
 				<input type="submit" value="로그인" />
+				<input type="button" value="회원가입"  onClick="location.href='joinForm.action'"/>
 			</td>
 		</tr>
 	</table>

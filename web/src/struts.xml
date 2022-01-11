@@ -24,5 +24,15 @@
 			</result>
 		</action>
 		
+		<action name="joinForm"  class="user.action.userJoinAction" method="form">
+			<result name="success">/jsp/user/joinForm.jsp</result> 
+		</action>
+		<action name="join" class="user.action.userJoinAction">
+			<result type="chain" >
+				<param name="actionName">main</param>
+			</result>
+		</action>
+		
+		
 	</package>
 </struts>

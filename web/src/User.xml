@@ -13,5 +13,9 @@
 	<select id="selectUserById" resultClass="User" parameterClass="Integer">
 		select * from T_USER where id = #id#
 	</select>
-
+	
+	<insert id="insertUser" parameterClass="User">
+		insert into T_USER (id, password, name, email)
+		values (#id#,#password#,#name#,#email#)
+	</insert>
 </sqlMap>

@@ -45,5 +45,18 @@ public class UserDAO {
 		return result;
 
 	}
+	
+	public static boolean userJoin(userVo user) {
+		try {
+//			System.out.println("user.getId():"+user.getId());
+//			System.out.println("user:"+user);
+			sqlMapper.insert("insertUser", user);
+			return true;
+			
+		} catch (SQLException se) {
+			se.printStackTrace();
+			return false;
+		}
+	}
 
 }
