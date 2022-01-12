@@ -33,6 +33,17 @@
 			</result>
 		</action>
 		
+		<!--  QnA 게시판 관련 액션 -->
+		<action name="qnaList" class="qna.action.listAction">
+			<result>/jsp/qna/qnaList.jsp</result>
+		</action>
+		
+		<action name="qnaView" class="qna.action.viewAction">
+			<result>/jsp/qna/qnaView.jsp</result>
+		</action>
+		
+		
+		
 		
 	</package>
 </struts>

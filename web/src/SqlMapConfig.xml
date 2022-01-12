@@ -11,5 +11,6 @@
 		</dataSource>
 	</transactionManager>
 	<sqlMap resource="User.xml"  />
+	<sqlMap resource="QnA.xml"  />
 	
 </sqlMapConfig>

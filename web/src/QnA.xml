@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="QnA">
+	<typeAlias alias="QnA" type="qna.model.qnaVo" />
+	<typeAlias alias="Com" type="qna.model.comVo" />
+	
+	<resultMap class="Qna" id="QnaList">
+		<result property="qnaNo" column="qna_no"/>
+		<result property="qnaSubject" column="qna_subject"/>
+		<result property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="password" column="password"/>
+		<result property="qnaContent" column="qna_content"/>
+		<result property="qnaFileNm" column="qna_file_nm"/>
+		<result property="qnaOrgFile" column="qna_org_file"/>
+		<result property="qnaReadhit" column="qna_readhit"/>
+		<result property="qnaRegdate" column="qna_regdate"/>
+	</resultMap>
+	
+	<resultMap class="Com" id="ComList">
+		<result property="comNo" column="com_no"/>
+		<result property="boardNm" column="board_nm"/>
+		<result property="boardNo" column="board_no"/>
+		<result property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="comContents" column="com_contents"/>
+		<result property="comDate" column="com_date"/>
+	</resultMap>
+	
+	<sql id="qna_selectAll">
+		Select a.qna_no,
+		a.qna_subject,
+		a.id,
+		b.name,
+		a.password ,
+		a.qna_content,
+		a.qna_file_nm,
+		a.qna_org_file,
+		a.qna_readhit,
+		to_char(a.qna_regdate,'YYYY/MM/DD') as qna_regdate
+		From T_QNA a, T_USER b Where a.ID = b.ID		
+	</sql>
+	
+	<sql id="qna_where_no" >
+		And qna_no = #qnaNo#
+	</sql>
+	
+	<select id="qnaSelectAll" resultMap="QnaList" >
+		<include refid="qna_selectAll"/>
+		order by qna_no desc
+	</select>	
+	
+	
+
+</sqlMap>

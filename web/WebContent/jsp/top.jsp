@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <s:if test="#session.user == null" >
 <script>
-	parent.location.href="login.action";
+	parent.location.href="loginForm.action";
 </script>
 </s:if>
 </head>
