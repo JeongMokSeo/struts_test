@@ -43,6 +43,10 @@
 	</sql>
 	
 	<sql id="qna_where_no" >
+		Where qna_no = #qnaNo#
+	</sql>
+	
+	<sql id="qna_and_no" >
 		And qna_no = #qnaNo#
 	</sql>
 	
@@ -51,6 +55,34 @@
 		order by qna_no desc
 	</select>	
 	
+	<select id="qnaSelectOne" resultMap="QnaList" parameterClass="int">
+		<include refid="qna_selectAll"/>
+		<include refid="qna_and_no"/>
+	</select>
 	
+	<select id="qnaReplyList" parameterClass="Qna" resultMap="ComList">
+		select 
+			a.com_no,
+			a.board_nm,
+			a.board_no,
+			a.id,
+			b.name as name,
+			a.com_contents,
+			to_char(a.com_date,'YYYY/MM/DD') as com_date
+			from T_COM a, T_USER b
+			where a.ID = b.ID
+			and a.board_nm = 'QNA' 
+			and a.board_no = #qnaNo#	
+	</select>
+	
+	<update id="qnaUpdateReadHit" parameterClass="int">
+		update T_QNA set qna_readhit = qna_readhit + 1
+		where qna_no = #qnaNo#
+	</update>
+	
+	<insert id="qnaReplyInsert" parameterClass="Com" >
+		insert into T_COM (COM_NO, board_nm, board_no, id, com_contents,com_date)
+		values (com_seq.nextval, #boardNm#,#boardNo#,#id#,#comContents#, sysdate )
+	</insert>
 
 </sqlMap>

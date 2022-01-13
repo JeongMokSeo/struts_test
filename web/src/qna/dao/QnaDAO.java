@@ -10,6 +10,9 @@ import org.apache.ibatis.io.Resources;
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.ibatis.sqlmap.client.SqlMapClientBuilder;
 
+import qna.model.comVo;
+import qna.model.qnaVo;
+
 public class QnaDAO {
 	
 	private static SqlMapClient sqlMapper;
@@ -34,5 +37,50 @@ public class QnaDAO {
 		}
 		return null;
 	}
+	
+	public static qnaVo qnaSelectOne(int qnaNo) {
+		
+		try {
+			
+			return (qnaVo) sqlMapper.queryForObject("qnaSelectOne", qnaNo);
+		} catch (SQLException se) {
+			se.printStackTrace();
+		}
+		return null;
+	}
 
+	public static List qnaReplyList(qnaVo qna) {
+		
+		try {
+			
+			return sqlMapper.queryForList("qnaReplyList", qna);
+		} catch (SQLException se) {
+			se.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static boolean qnaUpdateReadHit(int qnaNo) {
+		
+		try {
+			sqlMapper.update("qnaUpdateReadHit", qnaNo);
+			return true;
+		} catch (SQLException se) {
+			se.printStackTrace();
+			return false;
+		}
+	}
+	
+	public static boolean qnaReplyInsert(comVo comvo) {
+		
+		try {
+			sqlMapper.insert("qnaReplyInsert", comvo);
+			return true;
+		} catch (SQLException se) {
+			se.printStackTrace();
+			return false;
+		}		
+	}
+	
+	
 }

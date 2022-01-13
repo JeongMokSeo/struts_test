@@ -42,7 +42,12 @@
 			<result>/jsp/qna/qnaView.jsp</result>
 		</action>
 		
-		
+		<!--  QnA 댓글 관련 액션 -->	
+		<action name="qnaReplyWrite" class="qna.action.viewAction" method="replyWrite">
+			<result type="chain">
+				<param name="actionName">qnaView</param>
+			</result>
+		</action>	
 		
 		
 	</package>

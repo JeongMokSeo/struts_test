@@ -9,7 +9,7 @@
 <body>
 <table width="100%" border="0" cellspacing="0" cellpadding="2">
 	<tr>
-		<td align="center"><<h2>QnA게시판</h2></td>
+		<td align="center"><h2>QnA게시판</h2></td>
 	</tr>
 	<tr>
 		<td height="20"></td>
