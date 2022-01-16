@@ -49,6 +49,23 @@
 			</result>
 		</action>	
 		
+ 		<action name="qnaWriteForm" class ="qna.action.writeAction" method="form">
+			<result>/jsp/qna/qnaWrite.jsp</result>
+		</action>
+		<action name="qnaWrite" class="qna.action.writeAction">
+			<result type="chain">
+				<param name="actionName">qnaList</param>
+			</result>
+		</action>
+		
+		<action name="qnaModifyForm" class="qna.action.modifyAction" method="form">
+			<result>/jsp/qna/qnaModify.jsp</result>
+		</action>
+		<action name="qnaModify" class="qna.action.modifyAction">
+			<result type="chain">
+				<param name="actionName">qnaList</param>
+			</result>
+		</action>
 		
 	</package>
 </struts>

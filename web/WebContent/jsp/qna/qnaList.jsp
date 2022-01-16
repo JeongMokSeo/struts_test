@@ -59,7 +59,7 @@
 		<td colspan="5"> <s:property value="pagingHtml" escape="false"/></td>
 	</tr>
 	<tr align="right">
-		<td colspan="5"><input type="button" value="글쓰기"></td>
+		<td colspan="5"><input type="button" value="글쓰기" onclick="javascript:location.href='qnaWriteForm.action?currentPage=<s:property value="currentPage" />'"></td>
 	</tr>
 	
 </table>

@@ -84,5 +84,29 @@
 		insert into T_COM (COM_NO, board_nm, board_no, id, com_contents,com_date)
 		values (com_seq.nextval, #boardNm#,#boardNo#,#id#,#comContents#, sysdate )
 	</insert>
+	
+	<insert id="qnaInsert" parameterClass="QnA" >
+		insert into T_QNA (QNA_NO, qna_subject,id,password,qna_content,qna_readhit,qna_regdate)
+		values (qna_seq.nextval, #qnaSubject#,#id#,#password#,#qnaContent#, 0, sysdate )
+	</insert>
+	
+	<select id="qnaLastNo" resultClass="QnA">
+		select max(qna_no) as qnaNo From T_QNA
+	</select>
+	
+ 	<update id="qnaUpdateFile" parameterClass="QnA">
+		Update T_QNA set
+		 qna_org_file = #qnaOrgFile#,
+		 qna_file_nm = #qnaFileNm#
+		 <include refid="qna_where_no"/>
+	</update>
+	
+ 	<update id="qnaUpdate" parameterClass="QnA">
+		Update T_QNA set
+		 password = #password#,
+		 qna_subject = #qnaSubject#,
+		 qna_content = #qnaContent#
+		 <include refid="qna_where_no"/>
+	</update>
 
 </sqlMap>

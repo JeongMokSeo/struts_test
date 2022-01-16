@@ -89,6 +89,14 @@
 	<tr bgcolor="#777777">
 		<td height="20" colspan="2"></td>
 	</tr>	
+	<tr >
+		<td align="right" colspan="2">
+			<s:if test="#session.user.id == resultClass.id">
+				<input type="button" name="modify" value="수정" onclick="javascript:location.href='qnaModifyForm.action?qnaNo=<s:property value="qnaNo" />&currentPage=<s:property value="currentPage" />'" >
+			</s:if>
+			<input name="list" type="button" value="목록" onclick="javascript:location.href='qnaList.action?currentPage=<s:property value="currentPage" />'" >
+		</td>
+	</tr>	
 </table>	
 
 </form>

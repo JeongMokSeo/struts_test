@@ -82,5 +82,45 @@ public class QnaDAO {
 		}		
 	}
 	
+	public static boolean qnaInsert(qnaVo qna) {
+		try {
+			sqlMapper.insert("qnaInsert", qna);
+			return true;
+		} catch (SQLException se) {
+			se.printStackTrace();
+			return false;
+		}			
+	}
+	
+	public static qnaVo qnaLastNo() {
+		try {
+			
+			return (qnaVo)sqlMapper.queryForObject("qnaLastNo");
+		} catch (SQLException se) {
+			se.printStackTrace();
+			return null;
+		}		
+	}
+	
+	public static boolean qnaUpdateFile(qnaVo qna) {
+		try {
+			sqlMapper.update("qnaUpdateFile", qna);
+			return true;
+		} catch (SQLException se) {
+			se.printStackTrace();
+			return false;
+		}			
+	}
+	
+	public static boolean qnaUpdate(qnaVo qna) {
+		try {
+			sqlMapper.update("qnaUpdate", qna);
+			return true;
+		} catch (SQLException se) {
+			se.printStackTrace();
+			return false;
+		}			
+	}
+	
 	
 }
